@@ -141,3 +141,15 @@ Unattended-Upgrade::DevRelease "auto";
 // uninstallable packages at the expense of rarely keeping back packages which
 // could be upgraded or installed.
 // Unattended-Upgrade::Allow-APT-Mark-Fallback "true";
+Unattended-Upgrade::Origins-Pattern {
+        // Automatically upgrade packages from these origins:
+        "origin=Debian,codename=${distro_codename},label=Debian";
+        "origin=Debian,codename=${distro_codename},label=Debian-Security";
+        "origin=Debian,codename=${distro_codename},label=Debian-Updates";
+        "origin=Debian,codename=${distro_codename},label=Debian-Backports";
+
+        "origin=Ubuntu,codename=${distro_codename},label=Ubuntu";
+        "origin=Ubuntu,codename=${distro_codename},label=Ubuntu-Security";
+        "origin=Ubuntu,codename=${distro_codename},label=Ubuntu-Updates";
+        "origin=Ubuntu,codename=${distro_codename},label=Ubuntu-Backports";
+};
